@@ -6,4 +6,4 @@ permalink: /about/
 
 这是一个记录的地方，enjoy  ：）
 
-![_config.yml]({{ site.baseurl }}/images/about.jpeg)
+把一些事情用文字记录下来，以便查看
