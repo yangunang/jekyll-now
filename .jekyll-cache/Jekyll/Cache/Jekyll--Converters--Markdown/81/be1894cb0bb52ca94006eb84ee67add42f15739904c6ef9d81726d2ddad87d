@@ -1,0 +1,47 @@
+I"P<p>Record knowledge</p>
+
+<p><img src="/images/nginx01.png" alt="_config.yml" /></p>
+
+<h2 id="nginx">Nginx</h2>
+
+<p><strong>nginx</strong> is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.</p>
+
+<h3 id="the-http-status-code">The http status code</h3>
+
+<p>HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:</p>
+
+<ul>
+  <li>Informational responses (100–199)</li>
+  <li>Successful responses (200–299)</li>
+  <li>Redirects (300–399)</li>
+  <li>Client errors (400–499)</li>
+  <li>and Server errors (500–599)
+You can find an updated specification in <a href="https://tools.ietf.org/html/rfc7231#section-6.2">RFC 7231</a>.</li>
+</ul>
+
+<h3 id="nginx-variables">nginx variables</h3>
+<p><em>URL</em><br />
+<img src="/images/url.png" alt="_config.yml" /></p>
+
+<ul>
+  <li>
+    <p><strong>$host</strong><br /> 
+match request url <strong>domain name</strong><br /></p>
+  </li>
+  <li><strong>$http_host</strong><br />
+match</li>
+  <li><strong>$request_method</strong></li>
+  <li><strong>$request_uri</strong></li>
+  <li><strong>$scheme</strong></li>
+</ul>
+
+<h3 id="make-it-your-own">Make it your own</h3>
+
+<p>Fonts, color schemes, layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.</p>
+
+<h3 id="a-robust-editor-for-advanced-markdown-users">A robust editor for advanced Markdown users</h3>
+
+<p>MarkdownPad supports multiple Markdown processing engines, including standard Markdown, Markdown Extra (with Table support) and GitHub Flavored Markdown.</p>
+
+<p>With a tabbed document interface, PDF export, a built-in image uploader, session management, spell check, auto-save, syntax highlighting and a built-in CSS management interface, there’s no limit to what you can do with MarkdownPad.</p>
+:ET

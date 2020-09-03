@@ -1,0 +1,40 @@
+I"<p><strong>nginx  limit Request methods</strong></p>
+
+<h1 id="1the-http-request-methods">1.The http Request methods</h1>
+
+<p>https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods</p>
+
+<p>​</p>
+
+<h1 id="2nginx-limit-request-methods">2.nginx limit Request methods</h1>
+
+<p>A. use nginx  Directive if</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                add_header Allow "GET, POST, HEAD" always;
+                if ($request_method ~ (POST|GET) ){
+
+                  return 400;
+
+                }
+</code></pre></div></div>
+
+<p>B. use nginx limit_except  module</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>              add_header Allow "GET, POST, HEAD" always;
+			  limit_except GET POST {
+                    deny all;
+               } ## 3.CURL command test
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl   --request  put  requestURL
+     return 400   #status code
+
+curl   --request  get  requestURL
+     return url resource
+     
+use curl command I parament verification the response head
+curl  -I  requestURL 
+
+</code></pre></div></div>
+
+:ET

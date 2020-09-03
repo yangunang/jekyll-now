@@ -1,0 +1,63 @@
+I"�<p>Record knowledge</p>
+
+<p><img src="/images/nginx01.png" alt="_config.yml" /></p>
+
+<h2 id="http">HTTP</h2>
+
+<p><strong>Hypertext Transfer Protocol (HTTP)</strong> is an application-layer protocol for transmitting hypermedia documents</p>
+
+<h3 id="the-http-status-code">The http status code</h3>
+
+<p>HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:</p>
+
+<ul>
+  <li>Informational responses (100–199)</li>
+  <li>Successful responses (200–299)</li>
+  <li>Redirects (300–399)</li>
+  <li>Client errors (400–499)</li>
+  <li>and Server errors (500–599)
+You can find an updated specification in <a href="https://tools.ietf.org/html/rfc7231#section-6.2">RFC 7231</a>.</li>
+</ul>
+
+<h3 id="http-web-server-nginx">http web server nginx</h3>
+
+<p>nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server</p>
+
+<h3 id="nginx-variables">nginx variables</h3>
+<p><strong>URL</strong><br />
+<img src="/images/url.png" alt="_config.yml" /></p>
+
+<ul>
+  <li>
+    <p><strong>$host</strong><br /> 
+match request url <strong>domain name</strong><br /></p>
+  </li>
+  <li><strong>$http_host</strong><br />
+match request <strong>domain name</strong> + <strong>path</strong></li>
+  <li><strong>$request_method</strong>
+    <ul>
+      <li>GET</li>
+      <li>PUT</li>
+      <li>POST</li>
+      <li>DELETE</li>
+      <li>HEAD<br />
+ <a href="https://tools.ietf.org/html/rfc7231#section-4">Request methods document</a></li>
+    </ul>
+  </li>
+  <li><strong>$request_uri</strong><br />
+match request <strong>path</strong></li>
+  <li><strong>$scheme</strong><br />
+match request <strong>protocal</strong></li>
+</ul>
+
+<h3 id="use-nginx-limit-request">use nginx limit request</h3>
+
+<ul>
+  <li>can use request_method limit access<br />
+only allow <strong>GET</strong></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">	<span class="k">if</span> <span class="p">(</span><span class="nx">$request_method</span> <span class="o">!=</span>  <span class="nx">GET</span> <span class="p">){</span>
+			 <span class="k">return</span> <span class="mi">405</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></figure>
+:ET
